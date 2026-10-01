@@ -1,7 +1,10 @@
 {
-  // 阿里云 ESA Pages 配置：纯静态单页应用，无构建步骤
-  // 静态资源目录为仓库根目录（index.html 所在处）
-  "name": "library-borrow-stats",
+  // 阿里云 ESA Pages 配置：纯静态单页应用，无依赖安装、无构建步骤
+  // 关键点：必须显式把 buildCommand 设为空操作（如 "true"），
+  // 否则 ESA 会执行默认的 "npm run build"，因仓库无 package.json 而构建失败
+  "name": "Book_Data_Cleaning",
+  "installCommand": "true",
+  "buildCommand": "true",
   "assets": {
     "directory": "./",
     "notFoundStrategy": "404Page"
